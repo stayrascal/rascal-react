@@ -5,7 +5,8 @@
   "author": "Stay Rascal",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "start1": "next dev"
   },
   "dependencies": {
     "html-webpack-plugin": "^2.28.0",
