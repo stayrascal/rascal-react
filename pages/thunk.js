@@ -1,5 +1,5 @@
 import {createStore} from "redux";
-import {Provider} from "react-redux";
+import {Provider as Redux} from "react-redux";
 
 const initialState = {}
 
@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer, initialState)
 
 export default props => (
-    <Provider store={store}>
+    <Redux store={store}>
         <div>Redux</div>
-    </Provider>
+    </Redux>
 )

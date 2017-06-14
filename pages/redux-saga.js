@@ -1,5 +1,5 @@
 import {applyMiddleware, createStore} from "redux";
-import {Provider} from "react-redux";
+import {Provider as Redux} from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import thunk from "redux-thunk";
 
@@ -16,7 +16,7 @@ const store = createStore(reducer, applyMiddleware(thunk, sagaMiddleware), initi
 sagaMiddleware.run(rootSaga)
 
 export default props => (
-    <Provider store={store}>
+    <Redux store={store}>
         <div>Redux</div>
-    </Provider>
+    </Redux>
 )
