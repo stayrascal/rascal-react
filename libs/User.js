@@ -7,7 +7,7 @@ export default class User {
     }
 
     hello(target) {
-        return `Hello ${target}, I am ${this.name}`
+        return `Hello ${target}, I am ${this.name}.`
     }
 
     report() {
