@@ -20,4 +20,17 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // Setup logger
 app.use(morgan('combined'))
 
-app.use();
+const index = require('./routes/index')
+app.use('/', index)
+
+//Serve static assets
+app.use(express.static(path.resolve(__dirname, '..', 'build')))
+
+const api = require('./routes/api')
+app.use('/api', api)
+
+// Always return the main index.html, so react-router render the route in the client
+const  universalLoader = require('./universal')
+app.use('/', universalLoader)
+
+module.exports = app
